@@ -1,0 +1,6 @@
+[submodule "microduck-simulator"]
+	path = microduck-simulator
+	url = https://huggingface.co/spaces/pollen-robotics/microduck-simulator
+[submodule "microduck_rl"]
+	path = microduck_rl
+	url = https://github.com/pollen-robotics/microduck_rl.git
