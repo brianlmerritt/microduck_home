@@ -1,8 +1,7 @@
 # Microduck training workspace
 
 Prepare a reproducible simulation and reinforcement-learning training environment
-for a Microduck robot expected to arrive in a few months. The root directory is
-currently named `microcat` and may be renamed later.
+for a Microduck robot expected to arrive in a few months.
 
 This repository is the project root. Other projects belong here as Git submodules.
 
@@ -29,17 +28,29 @@ git -C microduck-simulator lfs pull
 ## Setup status and next steps
 
 - Both upstream repositories are registered and checked out as submodules.
-- Git LFS is missing on the current Mac; simulator binary assets remain LFS
-  pointers until Git LFS is installed and the assets are pulled.
-- Application and Python dependencies have not been installed, and simulation
-  and training have not yet been run.
+- Simulator setup and initial checks are recorded as complete in the roadmap.
+- Development and training now use the Windows / WSL2 PC with an RTX 3090 Ti.
+  The first 5,000-iteration flat walking run completed and was replayed; frequent
+  falls leave gait acceptance open.
+- On 17 September 2026 the user reported starting a 4,096-environment,
+  50,000-iteration backlash VelStand run. Its completion and behaviour remain to
+  be recorded through the checkpoint-review workbook.
 - Official training uses MuJoCo Warp and requires an NVIDIA CUDA GPU plus `uv`.
-  The intended training host is a Windows PC with an RTX 3090; its Linux/WSL2
-  setup remains to be tested. The 16 GB Mac Mini is for scaffolding, not RL
-  training. The upstream project also supports Hugging Face Jobs.
+  The 16 GB Mac Mini remains available for lightweight work. The upstream
+  project also supports Hugging Face Jobs.
 
 See [TODO.md](TODO.md) for the roadmap and
 [Microduck projects](docs/MICRODUCK_PROJECTS.md) for research and source links.
+
+Start the guided exercises in the
+[Microduck RL workbook](RL_Workbooks/01_microduck_rl_tutorial/README.md).
+
+For the current run, open the
+[checkpoint-review lesson](RL_Workbooks/10_experiments/backlash_velocity_flat_unified_policy/checkpoint_review/instructions.md).
+The [English RL reference](docs/rl_reference/README.md) maps documents to actual
+environments and preserves translated design history. The
+[human-interaction plan](docs/rl_reference/human_interaction_plan.md) explains
+the next implementation steps for movement, following and sensing.
 
 See the [simulator setup](microduck-simulator/README.md),
 [RL setup](microduck_rl/README.md), and

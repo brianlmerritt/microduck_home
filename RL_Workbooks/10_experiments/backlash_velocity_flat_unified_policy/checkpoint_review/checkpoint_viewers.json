@@ -1,0 +1,9 @@
+{
+  "project_dir": "../../../../microduck_rl",
+  "run_dir": "logs/rsl_rl/velstand/2026-09-17_16-51-02_experiment-backlash-flat-velstand-baseline",
+  "task": "Mjlab-VelStand-Flat-Backlash-MicroDuck",
+  "checkpoint_interval": 3000,
+  "num_checkpoints": 5,
+  "base_port": 8100,
+  "device": "cuda:0"
+}
